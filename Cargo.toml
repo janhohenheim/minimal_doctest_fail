@@ -1,0 +1,16 @@
+[package]
+name = "minimal_doctest_fail"
+version = "0.1.0"
+authors = ["Jan Hohenheim <jan@hohenheim.ch>"]
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.14.0-rc", features = ["dynamic_linking"] }
+
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
