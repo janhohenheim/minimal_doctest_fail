@@ -5,6 +5,7 @@ authors = ["Jan Hohenheim <jan@hohenheim.ch>"]
 edition = "2021"
 
 [dependencies]
+# remove the `dynamic_linking` feature to fix the issue.
 bevy = { version = "0.14.0-rc", features = ["dynamic_linking"] }
 
 # Enable a small amount of optimization in debug mode
